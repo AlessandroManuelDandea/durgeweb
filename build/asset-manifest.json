@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AlessandroManuelDandea/durgeweb.git/static/css/main.fb8f634c.css",
-    "main.js": "/AlessandroManuelDandea/durgeweb.git/static/js/main.836b7687.js",
-    "static/js/488.89c2c2bf.chunk.js": "/AlessandroManuelDandea/durgeweb.git/static/js/488.89c2c2bf.chunk.js",
-    "index.html": "/AlessandroManuelDandea/durgeweb.git/index.html",
-    "main.fb8f634c.css.map": "/AlessandroManuelDandea/durgeweb.git/static/css/main.fb8f634c.css.map",
-    "main.836b7687.js.map": "/AlessandroManuelDandea/durgeweb.git/static/js/main.836b7687.js.map",
-    "488.89c2c2bf.chunk.js.map": "/AlessandroManuelDandea/durgeweb.git/static/js/488.89c2c2bf.chunk.js.map"
+    "main.css": "/durgeweb/static/css/main.fb8f634c.css",
+    "main.js": "/durgeweb/static/js/main.5879d929.js",
+    "static/js/488.89c2c2bf.chunk.js": "/durgeweb/static/js/488.89c2c2bf.chunk.js",
+    "index.html": "/durgeweb/index.html",
+    "main.fb8f634c.css.map": "/durgeweb/static/css/main.fb8f634c.css.map",
+    "main.5879d929.js.map": "/durgeweb/static/js/main.5879d929.js.map",
+    "488.89c2c2bf.chunk.js.map": "/durgeweb/static/js/488.89c2c2bf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb8f634c.css",
-    "static/js/main.836b7687.js"
+    "static/js/main.5879d929.js"
   ]
 }
