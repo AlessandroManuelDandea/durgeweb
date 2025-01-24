@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AlessandroManuelDandea/durgeweb.git/static/css/main.fb8f634c.css",
+    "main.js": "/AlessandroManuelDandea/durgeweb.git/static/js/main.836b7687.js",
+    "static/js/488.89c2c2bf.chunk.js": "/AlessandroManuelDandea/durgeweb.git/static/js/488.89c2c2bf.chunk.js",
+    "index.html": "/AlessandroManuelDandea/durgeweb.git/index.html",
+    "main.fb8f634c.css.map": "/AlessandroManuelDandea/durgeweb.git/static/css/main.fb8f634c.css.map",
+    "main.836b7687.js.map": "/AlessandroManuelDandea/durgeweb.git/static/js/main.836b7687.js.map",
+    "488.89c2c2bf.chunk.js.map": "/AlessandroManuelDandea/durgeweb.git/static/js/488.89c2c2bf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb8f634c.css",
+    "static/js/main.836b7687.js"
+  ]
+}
