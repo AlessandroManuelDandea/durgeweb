@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/durgeweb/static/css/main.fb8f634c.css",
-    "main.js": "/durgeweb/static/js/main.5879d929.js",
+    "main.css": "/durgeweb/static/css/main.aefc2c5f.css",
+    "main.js": "/durgeweb/static/js/main.8f1d91c8.js",
     "static/js/488.89c2c2bf.chunk.js": "/durgeweb/static/js/488.89c2c2bf.chunk.js",
+    "static/media/Blacklettersh.ttf": "/durgeweb/static/media/Blacklettersh.006fffdf5b9be2f3c2bf.ttf",
+    "static/media/BLACEB__.TTF": "/durgeweb/static/media/BLACEB__.77e29ef826f3f399e01b.TTF",
+    "static/media/Horst Blackletter Demo.ttf": "/durgeweb/static/media/Horst Blackletter Demo.22b75afa94c24419daa7.ttf",
     "index.html": "/durgeweb/index.html",
-    "main.fb8f634c.css.map": "/durgeweb/static/css/main.fb8f634c.css.map",
-    "main.5879d929.js.map": "/durgeweb/static/js/main.5879d929.js.map",
+    "main.aefc2c5f.css.map": "/durgeweb/static/css/main.aefc2c5f.css.map",
+    "main.8f1d91c8.js.map": "/durgeweb/static/js/main.8f1d91c8.js.map",
     "488.89c2c2bf.chunk.js.map": "/durgeweb/static/js/488.89c2c2bf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb8f634c.css",
-    "static/js/main.5879d929.js"
+    "static/css/main.aefc2c5f.css",
+    "static/js/main.8f1d91c8.js"
   ]
 }
