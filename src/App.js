@@ -1,12 +1,18 @@
 import React from 'react';
-import './index.css';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-      <h1 className="text-4xl font-blackletter">Ciao, questo è il font Blackletter!</h1>
-      <p className="font-horstblackletter">Questo è il font Horst Blackletter.</p>
-      <p className="font-blaceb">E questo è il font BLACEB.</p>
+    <div className="App_container">
+      <div className="App_wrapper">
+        <h1 className="App_title">Demiurgo Mythos</h1>
+        <h2 className="App_subtitle">Work in Progress...</h2>
+        <p className="App_message">
+          Hello everyone, and welcome to <span className="highlight">Demiurgo Mythos</span>, my website! <br />
+          Unfortunately, it's still a work in progress, but I hope you can bear with me as I continue building it. <br />
+          I am <span className="author">Durge</span>, the creator of this site, and I can't wait to share more with you soon. <br />
+          Thank you for your patience and support!
+        </p>
+      </div>
     </div>
   );
 }

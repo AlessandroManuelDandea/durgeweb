@@ -2,6 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(App.css);
 
 body {
   margin: 0;
@@ -22,3 +23,5 @@ code {
 @font-face { font-family: 'HorstBlackletter'; src: url('../public/fonts/Horst Blackletter Demo.ttf') format('truetype'); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: 'BLACEB'; src: url('../public/fonts/BLACEB__.TTF') format('truetype'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'NewRocker'; src: url('../public/fonts/NewRocker-Regular.ttf') format('truetype'); font-weight: normal; font-style: normal; }
