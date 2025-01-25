@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.95ef72a1.css",
-    "main.js": "/static/js/main.8a9475e8.js",
+    "main.css": "/static/css/main.ab7cec42.css",
+    "main.js": "/static/js/main.282f1df0.js",
     "static/media/red-grunge-background.jpg": "/static/media/red-grunge-background.3b5e69fb8bedfb22f4e5.jpg",
     "static/media/NewRocker-Regular.ttf": "/static/media/NewRocker-Regular.8c1d320ee68306021d3d.ttf",
     "static/media/Blacklettersh.ttf": "/static/media/Blacklettersh.006fffdf5b9be2f3c2bf.ttf",
     "static/media/BLACEB__.TTF": "/static/media/BLACEB__.77e29ef826f3f399e01b.TTF",
     "static/media/Horst Blackletter Demo.ttf": "/static/media/Horst Blackletter Demo.22b75afa94c24419daa7.ttf",
     "index.html": "/index.html",
-    "main.95ef72a1.css.map": "/static/css/main.95ef72a1.css.map",
-    "main.8a9475e8.js.map": "/static/js/main.8a9475e8.js.map"
+    "main.ab7cec42.css.map": "/static/css/main.ab7cec42.css.map",
+    "main.282f1df0.js.map": "/static/js/main.282f1df0.js.map"
   },
   "entrypoints": [
-    "static/css/main.95ef72a1.css",
-    "static/js/main.8a9475e8.js"
+    "static/css/main.ab7cec42.css",
+    "static/js/main.282f1df0.js"
   ]
 }

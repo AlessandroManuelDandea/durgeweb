@@ -25,3 +25,59 @@ code {
 @font-face { font-family: 'BLACEB'; src: url('../public/fonts/BLACEB__.TTF') format('truetype'); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: 'NewRocker'; src: url('../public/fonts/NewRocker-Regular.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+
+
+/* Nascondi il contenuto iniziale */
+#root {
+  opacity: 0; /* Nascondi inizialmente */
+  transition: opacity 0.5s ease; /* Transizione per il contenuto */
+}
+
+/* Loader sopra tutto */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Sfondo nero */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Sopra tutto */
+  color: #c1a36d; /* Testo dorato */
+}
+
+/* Spinner animato */
+.loader-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #ef2821;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Testo del loader */
+.loader-text {
+  margin-top: 20px;
+  font-family: 'New Rocker', serif;
+  font-size: 1.5rem;
+}
+
+/* Animazione dello spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: black;
+}
+
+#root {
+  opacity: 0; /* Nascondi inizialmente */
+  transition: opacity 0.5s ease; /* Mostra con transizione */
+}
