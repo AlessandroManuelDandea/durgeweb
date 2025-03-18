@@ -7,6 +7,7 @@ module.exports = {
           dark: "#0C0B09", // Sfondo scuro
           redBright: "#EF2821", // Rosso acceso
           redDark: "#BD4945", // Rosso scuro
+          bloodDark: "#600000", // Rosso scuro
           violet: "#74528D", // Viola
           blue: "#405183", // Blu
           goldBeige: "#C1A36D", // Beige dorato
@@ -18,6 +19,7 @@ module.exports = {
         horstblackletter: ['HorstBlackletter', 'serif'],
         blaceb: ['BLACEB', 'serif'],
         newrocker: ['NewRocker', 'serif'],
+        oldenglishtextmt: ['oldenglishtextmt', 'serif'],
       },
     },
   },

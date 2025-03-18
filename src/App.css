@@ -1,72 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  /* Contenitore principale */
-  .App_container {
-    @apply flex items-center justify-center min-h-screen bg-black;
-    position: relative;
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Enable snapping on the Y-axis */
   }
-
-  /* Sfondo con immagine e opacità ridotta */
-  .App_container::before {
-    content: "";
-    @apply absolute inset-0;
-    background-image: url('./img/red-grunge-background.jpg'); /* Sostituisci con il tuo percorso */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3; /* Riduzione opacità per maggiore contrasto del testo */
-    z-index: 0;
+  
+  .snap-section {
+    height: 100vh; /* Each section fills the viewport */
+    scroll-snap-align: start; /* Snap to the start of each section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
-  /* Wrapper del contenuto */
-  .App_wrapper {
-    @apply relative text-center text-colors-goldBeige max-w-7xl mx-auto;
-    z-index: 1;
-    padding: 4rem;
-  }
-
-  /* Titolo principale */
-  .App_title {
-    @apply text-colors-redBright text-6xl  mb-12 font-horstblackletter;
-  }
-
-  /* Sottotitolo */
-  .App_subtitle {
-    @apply text-colors-redDark text-5xl font-blaceb;
-  }
-
-  /* Messaggio */
-  .App_message {
-    @apply text-3xl leading-loose font-newrocker;
-    line-height: 2.2;
-  }
-
-  /* Evidenziazione */
-  .App_message .highlight {
-    @apply text-colors-redBright font-bold;
-  }
-
-  .App_message .author {
-    @apply text-colors-greenBright font-bold;
-  }
-}
-
-@media (max-width: 768px) {
-    .App_wrapper {
-      @apply max-w-sm px-4 text-left;
-    }
-
-    .App_title {
-      @apply text-4xl mb-6;
-    }
-
-    .App_subtitle {
-      @apply text-3xl mb-4;
-    }
-
-    .App_message {
-      @apply text-base leading-relaxed;
-    }
-  }
+  

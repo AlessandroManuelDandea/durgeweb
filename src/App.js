@@ -1,20 +1,41 @@
 import React from 'react';
+import Navbar from './components/Navbar'
+import Hero from './components/Hero';
+import About from './components/About';
+import Mission from './components/Mission';
+import ExploreContent from './components/ExploreContent';
+import Social from './components/Social';
+import Footer from './components/Footer';
+import MissionMobile from './components/MissionMobile';
+
+
 
 function App() {
   return (
-    <div className="App_container">
-      <div className="App_wrapper">
-        <h1 className="App_title">Demiurgo Mythos</h1>
-        <h2 className="App_subtitle">Work in Progress...</h2>
-        <p className="App_message">
-          Hello everyone, and welcome to <span className="highlight">Demiurgo Mythos</span>, my website! <br />
-          Unfortunately, it's still a work in progress, but I hope you can bear with me as I continue building it. <br />
-          I am <span className="author">Durge</span>, the creator of this site, and I can't wait to share more with you soon. <br />
-          Thank you for your patience and support!
-        </p>
-      </div>
+    <div className="scroll-container">
+      <Navbar></Navbar>
+      <section className="snap-section hero-section">
+      <Hero></Hero>
+      </section>
+      <section className="snap-section about-section">
+      <About></About>
+      </section>
+      <section className="snap-section mission-section">
+      <Mission />
+      <MissionMobile />
+      </section>
+      <section className="snap-section explore-section">
+      <ExploreContent></ExploreContent>
+      </section>
+      <section className="snap-section social-section">
+        <Social />
+      </section>
+      <section className="snap-section footer-section">
+        <Footer />
+      </section>
     </div>
   );
 }
 
 export default App;
+

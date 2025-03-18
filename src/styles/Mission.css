@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .mission_section {
+    position: relative;
+    @apply relative bg-gray-800 text-white h-screen flex items-center justify-center w-full;
+    background-image: url('../img/red-grunge-background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mission_section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        #0C0B09 0%,
+        #0c0b093e 30%,
+        #0c0b093e 70%,
+        #0C0B09 100%
+      ),
+      url('../img/red-grunge-background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .mission_container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .mission_title {
+    @apply text-6xl font-oldenglishtextmt text-colors-redBright mb-12;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+  }
+
+  .mission_grid {
+    @apply grid w-full mt-12 gap-y-8;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "left center right"
+      "bottom bottom bottom";
+  }
+
+  .mission_cell {
+    @apply flex items-center justify-center;
+  }
+
+  .mission_icon {
+    @apply w-72 h-72;
+  }
+
+  .mission_text {
+    @apply text-4xl font-newrocker text-colors-goldBeige leading-snug w-96 text-center;
+  }
+
+  .mission_bottom {
+    grid-area: bottom;
+    @apply text-center col-span-3;
+  }
+
+  /* Hide this entire section on small screens */
+  @media (max-width: 768px) {
+    .mission_section {
+      display: none !important;
+    }
+  }
+}

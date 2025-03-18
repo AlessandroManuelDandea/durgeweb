@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  /* ================================
+     SMALL SCREENS (max-width: 768px)
+     => HAMBURGER + MOBILE MENU
+  ================================= */
+  @media (max-width: 768px) {
+
+    .navbar {
+      @apply bg-colors-dark fixed top-0 left-0 w-full 
+        flex items-center justify-between px-4 py-3 z-50;
+      /* If you want a gradient overlay, add it here */
+      /* background: linear-gradient(...); */
+    }
+
+    .navbar_logo h1 {
+      @apply text-xl text-colors-redBright font-oldenglishtextmt;
+    }
+
+    /* Show hamburger on mobile */
+    .hamburger-btn {
+      @apply flex flex-col items-center justify-center;
+      width: 30px;
+      height: 25px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .hamburger-line {
+      @apply block w-full h-1 bg-colors-redBright mb-1;
+    }
+
+    /* Hide the desktop menu entirely */
+    .desktop-menu {
+      @apply hidden;
+    }
+
+    /* MOBILE MENU with slide-down effect */
+    .mobile-menu {
+      @apply absolute top-full left-0 w-full bg-colors-dark flex flex-col items-center;
+      /* No vertical spacing by default */
+      padding: 0;
+      margin: 0;
+      space-y-0: 0; /* Tailwind wouldn't exist like that, so just ensure no gap class used */
+  
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      /* 
+        We also animate padding, so you don't see abrupt changes 
+        when toggling 
+      */
+    }
+  
+    .mobile-menu.open {
+      /* Now apply the vertical spacing only when open */
+      @apply py-3 px-4;
+      max-height: 300px;
+    }
+  
+    /* 
+      Ensure each <li> has no outside margins 
+      so it won't push the first item above the container 
+    */
+    .mobile-menu_item {
+      @apply flex items-center space-x-2 mb-3;
+      position: static; 
+      overflow: visible;
+      
+      padding: 0;
+    }
+  
+    .mobile-menu_icon {
+      @apply w-8 h-8;
+      position: static;
+    }
+  
+    .mobile-menu_label {
+      @apply text-colors-goldBeige font-newrocker text-lg;
+      /* or color: #C1A36D; if needed */
+      opacity: 1;
+    }
+  
+    /* Remove any .icon_text_container or .hover_text_container 
+       if it existed in desktop code. 
+       Or override them with: */
+    .icon_text_container,
+    .hover_text_container {
+      @apply static overflow-visible max-w-full;
+    }
+  }
+
+
+  /* ================================
+     LARGE SCREENS (min-width: 769px)
+     => ORIGINAL HOVER EXPANSION MENU
+  ================================= */
+  @media (min-width: 769px) {
+
+    /* Your original desktop styles */
+    .navbar {
+      @apply fixed top-0 left-0 w-full 
+        flex justify-between items-center 
+        bg-colors-dark px-40 py-4 z-50;
+      background: linear-gradient(
+        to bottom,
+        theme("colors.colors.dark") 0%,
+        theme("colors.colors.dark") 75%,
+        transparent 100%
+      );
+    }
+
+    .navbar_logo h1 {
+      @apply text-3xl text-colors-redBright font-oldenglishtextmt;
+    }
+
+    /* Hide hamburger on desktop */
+    .hamburger-btn {
+      @apply hidden;
+    }
+
+    /* Show the desktop menu */
+    .desktop-menu {
+      @apply flex space-x-6;
+    }
+
+    .menu_item {
+      @apply flex items-center relative transition-all duration-500 ease-in-out;
+    }
+
+    .icon_text_container {
+      @apply flex items-center space-x-2 relative overflow-hidden transition-all duration-500;
+    }
+
+    .menu_icon {
+      @apply w-7 h-7 opacity-70 transition-transform duration-500 ease-in-out;
+    }
+
+    .hover_text_container {
+      @apply flex items-center ml-2 h-full whitespace-nowrap;
+      width: auto;
+      max-width: 0;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .hover_text_container.expanded {
+      max-width: 200px;
+    }
+
+    .menu_label {
+      @apply opacity-0 text-colors-redBright font-newrocker text-sm;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      transition: opacity 0.5s ease-in-out;
+      text-decoration: none;
+    }
+
+    .hover_text_container.expanded .menu_label {
+      @apply opacity-100;
+      animation: typing 0.5s steps(20, end), fade-in 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .menu_item.hovered .menu_icon {
+      @apply opacity-100;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Hide the mobile menu on desktop */
+    .mobile-menu {
+      @apply hidden;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  /* COMMON (desktop + mobile) */
+  .hero {
+    @apply w-full relative h-screen overflow-hidden;
+    /*
+      We'll keep the desktop background in "min-width: 769px" 
+      so it's not the default for small screens 
+    */
+  }
+
+  .hero_overlay {
+    @apply absolute inset-0 mix-blend-overlay bg-colors-redBright;
+    background: linear-gradient(to bottom, #EF2821 60%, #828282 100%);
+    z-index: 1;
+  }
+
+  .hero_content {
+    @apply relative z-10 flex flex-col justify-center h-full;
+    /* We'll center text on mobile, 
+       so the final alignment is in the media queries below. */
+  }
+
+  .hero_title {
+    @apply font-oldenglishtextmt text-colors-redBright leading-none;
+  }
+
+  .hero_subtitle {
+    @apply font-oldenglishtextmt text-colors-goldBeige;
+    /* We'll set final sizes in the queries. */
+  }
+
+  .hero_cta {
+    @apply font-newrocker underline text-colors-redDark hover:text-colors-violet;
+  }
+
+
+  /* ===========================================
+     MOBILE SCREENS (max-width: 768px)
+     => new background, centered text, smaller fonts
+  =========================================== */
+  @media (max-width: 768px) {
+
+    .hero {
+      /* Use the NEW background for mobile */
+      background-image:
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 50%,
+    #0C0B09 100%
+  ),
+  url('../img/herobg-mobile.png');
+      background-size: cover;
+      background-position: center;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  
+    /* Hide scrollbar in Firefox */
+    html {
+      scrollbar-width: none;
+      -ms-overflow-style: none; /* IE/Edge */
+    }
+    /* Center the hero_content and text on mobile */
+    .hero_content {
+      @apply w-full px-6 text-center items-center; 
+      /* 
+        text-center => center text horizontally
+        items-center => center items in cross-axis 
+        px-6 => some horizontal padding
+      */
+    }
+
+    /* Make fonts suitable for a phone screen */
+    .hero_title {
+      @apply text-6xl mt-2; 
+      /* smaller than desktop, 
+         add margin-top if you want to space it down a bit */
+    }
+
+    .hero_subtitle {
+      @apply text-2xl mt-4 mx-10;
+    }
+
+    .hero_cta {
+      @apply text-base mt-6;
+    }
+  }
+
+
+  /* ===========================================
+     DESKTOP SCREENS (min-width: 769px)
+     => original background, half width, big fonts
+  =========================================== */
+  @media (min-width: 769px) {
+
+    .hero {
+      /* The original desktop background image */
+      background-image: 
+        linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 60%, 
+          #0c0b0972 70%,  
+          #0C0B09 100%
+        ),
+        url('../img/herobg.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero_content {
+      @apply w-2/4 px-10 lg:px-20 text-left items-start; 
+    }
+
+    .hero_title {
+      @apply text-8xl; 
+    }
+
+    .hero_subtitle {
+      @apply mt-6 text-5xl;
+    }
+
+    .hero_cta {
+      @apply text-lg mt-8;
+    }
+  }
+}

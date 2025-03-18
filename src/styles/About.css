@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  /* COMMON BASE (applies to both mobile & desktop) */
+  .about_section {
+    @apply bg-colors-dark text-colors-goldBeige overflow-hidden h-screen;
+    /* We'll define different padding & height in media queries */
+  }
+
+  .about_container {
+    @apply text-center pt-10;
+    /* The horizontal margin & spacing will differ per screen size */
+  }
+
+  .about_title {
+    @apply text-center mb-10 font-oldenglishtextmt;
+  }
+
+  .about_title h2 {
+    /* We'll adjust the final font size in media queries */
+    @apply text-colors-redBright;
+  }
+
+  .about_icon img {
+    @apply mx-auto w-20 h-20;
+  }
+
+  .about_content {
+    /* By default, a column layout on small screens.
+       We'll let "lg:flex-row" remain for large screens, or handle in media queries. */
+    @apply flex flex-col lg:flex-row gap-10;
+  }
+
+  .about_text {
+    /* We'll define final font-size in the queries */
+    @apply flex-1 leading-relaxed font-newrocker text-left;
+  }
+
+
+  /* ================================================
+     MOBILE SCREENS (max-width: 768px) => SIMPLER
+  ================================================ */
+  @media (max-width: 768px) {
+
+    .about_section {
+      @apply py-8; /* simpler vertical spacing, no h-screen */
+    }
+
+    .about_container {
+      @apply mx-4; /* smaller horizontal margin */
+    }
+
+    .about_title h2 {
+      @apply text-3xl mb-6; /* smaller than desktop */
+    }
+
+    .about_text {
+      @apply text-base mt-2; /* smaller paragraph text */
+    }
+  }
+
+
+  /* ================================================
+     DESKTOP SCREENS (min-width: 769px) => ORIGINAL
+  ================================================ */
+  @media (min-width: 769px) {
+
+    .about_section {
+      @apply py-14 h-screen; /* your original design */
+    }
+
+    .about_container {
+      @apply mx-40; /* bigger horizontal margin */
+    }
+
+    .about_title h2 {
+      @apply text-5xl mb-14; /* your original big font size */
+    }
+
+    .about_text {
+      @apply text-3xl; /* large paragraph text */
+    }
+  }
+}
