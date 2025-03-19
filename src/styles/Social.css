@@ -6,21 +6,16 @@
 
   /* =====================================
      MOBILE (max-width: 768px)
-     => simpler, smaller layout
   ===================================== */
   @media (max-width: 768px) {
 
     .social-section {
-      @apply relative w-full overflow-hidden py-10 h-screen 
-      
+      @apply relative w-full overflow-hidden py-10 h-screen;
+      background-image: url('../img/darktexture.png');
     }
 
     .social-bg {
       @apply absolute inset-0 bg-cover bg-center z-0;
-      /* If you want a different mobile background, change here:
-         background-image: url('../img/mobiletexture.png');
-         Otherwise keep the same darktexture.png
-      */
       background-image: url('../img/darktexture.png');
     }
 
@@ -39,56 +34,46 @@
       );
     }
 
-    /* 
-      A simpler layout: just center content, 
-      smaller gap, no huge top margin
-    */
     .social-content {
-      @apply relative z-10 flex flex-col items-center justify-center
-        w-full px-4 mt-6 pt-28;;
+      @apply relative z-10 flex flex-col items-center justify-center w-full px-4 mt-6 pt-28;
       height: auto;
     }
 
-    /* Smaller eyes container => smaller icons */
     .eyes-container {
       @apply flex flex-wrap justify-center gap-6 mb-6;
     }
 
+    /* 
+      .eye-container now has NO border; 
+      we keep it for layout/animation only 
+    */
     .eye-container {
-      @apply relative w-24 h-24 cursor-pointer;
+      @apply relative cursor-pointer flex items-center justify-center;
+      width: 4rem;   /* or w-16 => 64px */
+      height: 4rem;  /* or h-16 => 64px */
       transform: translateY(0);
       opacity: 1;
       animation: none;
+      /* No red border here */
+      border: none;
+      border-radius: 0;
+      background: none;
     }
 
-    .eye-bg {
-      @apply w-full h-full object-cover rounded-full opacity-80;
-    }
-
+    /* The icon itself gets a tight circular border */
     .eye-icon {
-      @apply absolute inset-0 m-auto object-cover rounded-full;
-      width: 2.5rem;
-      height: 2.5rem;
+      @apply w-full h-full object-cover border-4 border-colors-redBright rounded-full;
+      /* This ensures the image is a circle with a red border hugging the edges */
     }
-
-    /* Keep the hover bounce if you like, or remove it:
-       .eye-container:hover {
-         animation: hoverBounce 0.6s ease-in-out infinite;
-       }
-    */
 
     .social-title {
       @apply text-3xl text-colors-redBright font-oldenglishtextmt mb-2 text-center;
     }
 
     .social-subtitle {
-      @apply max-w-md font-newrocker text-center text-colors-goldBeige text-base
-        leading-relaxed;
+      @apply max-w-md font-newrocker text-center text-colors-goldBeige text-base leading-relaxed;
     }
 
-    /* If you still want fadeInUp, keep it. 
-       Just note the text is smaller. 
-    */
     .fade-in-up {
       animation: fadeInUp 1s ease-out forwards;
     }
@@ -102,58 +87,42 @@
 
   /* =====================================
      DESKTOP (min-width: 769px)
-     => original fancy design
   ===================================== */
   @media (min-width: 769px) {
 
     .social-section {
-      @apply relative w-full h-screen overflow-hidden;
+      @apply relative w-full h-screen overflow-hidden bg-colors-dark;
     }
 
-    .social-bg {
-      @apply absolute inset-0 bg-cover bg-center z-0;
-      background-image: url('../img/darktexture.png');
-    }
-
-    .social-overlay {
-      @apply absolute inset-0 bg-red-600 mix-blend-multiply z-0;
-    }
-
+    .social-bg,
+    .social-overlay,
     .social-overlay-green {
-      @apply absolute inset-0 z-10;
-      background: linear-gradient(
-        to bottom,
-        #0C0B09 0%,
-        rgba(0, 0, 0, 0) 30%,
-        rgba(0, 0, 0, 0) 90%,
-        #0C0B09 100%
-      );
+      display: none;
     }
 
     .social-content {
-      @apply relative z-10 flex flex-col items-center justify-center
-        h-full px-4 mt-2;
+      @apply relative z-10 flex flex-col items-center justify-center h-full px-4 ;
     }
 
     .eyes-container {
-      @apply flex flex-wrap justify-center gap-14 mb-16;
+      @apply flex flex-wrap justify-center gap-14 mb-16 my-10;
     }
 
     .eye-container {
-      @apply relative w-40 h-40 cursor-pointer;
+      @apply relative cursor-pointer flex items-center justify-center;
+      width: 4rem;  /* or w-24 => 96px */
+      height: 4rem; /* or h-24 => 96px */
       transform: translateY(0);
       opacity: 1;
       animation: none;
-    }
-
-    .eye-bg {
-      @apply w-full h-full object-cover rounded-full opacity-80;
+      border: none;        /* no border here */
+      border-radius: 0;    /* no radius here */
+      background: none;
     }
 
     .eye-icon {
-      @apply absolute inset-0 m-auto object-cover rounded-full;
-      width: 4.2rem;
-      height: 4.2rem;
+      @apply w-full h-full object-cover  rounded-full;
+      /* The image is circular with a tight red border around it */
     }
 
     @keyframes dropDownBounce {
@@ -192,13 +161,11 @@
     }
 
     .social-title {
-      @apply text-5xl text-colors-redBright font-oldenglishtextmt mb-4 text-center
-        opacity-0;
+      @apply text-6xl text-colors-redBright font-oldenglishtextmt mb-4 text-center opacity-0;
     }
 
     .social-subtitle {
-      @apply max-w-6xl font-newrocker text-center text-colors-goldBeige
-        text-3xl leading-relaxed opacity-0;
+      @apply max-w-6xl font-newrocker text-center text-colors-goldBeige text-3xl leading-relaxed opacity-0;
     }
 
     @keyframes fadeInUp {
@@ -220,5 +187,18 @@
     .delay-1 { animation-delay: 0.2s; }
     .delay-2 { animation-delay: 0.4s; }
     .delay-3 { animation-delay: 0.6s; }
+  }
+
+
+  /* fadeInUp definition if not present above */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

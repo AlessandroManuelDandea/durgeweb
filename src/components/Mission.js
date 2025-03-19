@@ -14,34 +14,31 @@ function Mission() {
     }
   }, [inView, controls]);
 
-  // Varianti personalizzate per ogni testo
+  // Varianti per le animazioni
   const leftTextVariants = {
-    hidden: { opacity: 0, x: 300, y: 0 }, // Parte dall'icona
+    hidden: { opacity: 0, x: 200 },
     visible: {
       opacity: 1,
-      x: 0, // Posizione finale a sinistra
-      y: 0,
-      transition: { duration: 1.5, ease: 'easeOut' },
+      x: 0,
+      transition: { duration: 1.2, ease: 'easeOut' },
     },
   };
 
   const rightTextVariants = {
-    hidden: { opacity: 0, x: -300, y: 0 }, // Parte dall'icona
+    hidden: { opacity: 0, x: -200 },
     visible: {
       opacity: 1,
-      x: 0, // Posizione finale a destra
-      y: 0,
-      transition: { duration: 1.5, ease: 'easeOut' },
+      x: 0,
+      transition: { duration: 1.2, ease: 'easeOut' },
     },
   };
 
   const bottomTextVariants = {
-    hidden: { opacity: 0, x: 0, y: -200 }, // Parte dall'icona
+    hidden: { opacity: 0, y: -150 },
     visible: {
       opacity: 1,
-      x: 0,
-      y: 0, // Posizione finale in basso
-      transition: { duration: 1.5, ease: 'easeOut' },
+      y: 0,
+      transition: { duration: 1.2, ease: 'easeOut' },
     },
   };
 
@@ -50,12 +47,12 @@ function Mission() {
     visible: {
       opacity: 1,
       rotate: 360,
-      transition: { duration: 1.5, ease: 'easeOut' },
+      transition: { duration: 1.2, ease: 'easeOut' },
     },
   };
 
   const titleVariants = {
-    hidden: { opacity: 0, y: -100 },
+    hidden: { opacity: 0, y: -80 },
     visible: {
       opacity: 1,
       y: 0,
@@ -77,14 +74,12 @@ function Mission() {
           The Vision of Demiurgo
         </motion.h2>
         <div className="mission_grid">
-          {/* Testo sinistro */}
           <motion.div
             className="mission_cell"
             variants={leftTextVariants}
           >
             <p className="mission_text">Crafting a one-of-a-kind portfolio</p>
           </motion.div>
-          {/* Icona centrale */}
           <motion.div className="mission_cell">
             <motion.img
               src={missionIcon}
@@ -95,14 +90,12 @@ function Mission() {
               animate={controls}
             />
           </motion.div>
-          {/* Testo destro */}
           <motion.div
             className="mission_cell"
             variants={rightTextVariants}
           >
             <p className="mission_text">Shaping worlds, one story at a time</p>
           </motion.div>
-          {/* Testo in basso */}
           <motion.div
             className="mission_cell mission_bottom"
             variants={bottomTextVariants}

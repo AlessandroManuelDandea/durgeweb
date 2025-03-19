@@ -3,7 +3,6 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero';
 import About from './components/About';
 import Mission from './components/Mission';
-import ExploreContent from './components/ExploreContent';
 import Social from './components/Social';
 import Footer from './components/Footer';
 import MissionMobile from './components/MissionMobile';
@@ -23,9 +22,6 @@ function App() {
       <section className="snap-section mission-section">
       <Mission />
       <MissionMobile />
-      </section>
-      <section className="snap-section explore-section">
-      <ExploreContent></ExploreContent>
       </section>
       <section className="snap-section social-section">
         <Social />
