@@ -11,7 +11,7 @@
   }
 
   .about_container {
-    @apply text-center pt-10;
+    @apply text-center pt-10 px-8;
     /* The horizontal margin & spacing will differ per screen size */
   }
 
@@ -24,9 +24,7 @@
     @apply text-colors-redBright;
   }
 
-  .about_icon img {
-    @apply mx-auto w-20 h-20;
-  }
+  
 
   .about_content {
     /* By default, a column layout on small screens.
@@ -36,7 +34,7 @@
 
   .about_text {
     /* We'll define final font-size in the queries */
-    @apply flex-1 leading-relaxed font-newrocker text-left;
+    @apply flex-1 leading-relaxed font-newrocker text-center;
   }
 
 
@@ -44,9 +42,12 @@
      MOBILE SCREENS (max-width: 768px) => SIMPLER
   ================================================ */
   @media (max-width: 768px) {
+    .about_icon img {
+      @apply mx-auto w-10 h-10;
+    }
 
     .about_section {
-      @apply py-8; /* simpler vertical spacing, no h-screen */
+      @apply  pt-16; /* simpler vertical spacing, no h-screen */
     }
 
     .about_container {
@@ -54,11 +55,11 @@
     }
 
     .about_title h2 {
-      @apply text-3xl mb-6; /* smaller than desktop */
+      @apply text-3xl ; /* smaller than desktop */
     }
 
     .about_text {
-      @apply text-base mt-2; /* smaller paragraph text */
+      @apply text-base; /* smaller paragraph text */
     }
   }
 
@@ -67,6 +68,10 @@
      DESKTOP SCREENS (min-width: 769px) => ORIGINAL
   ================================================ */
   @media (min-width: 769px) {
+
+    .about_icon img {
+      @apply mx-auto w-20 h-20;
+    }
 
     .about_section {
       @apply py-14 h-screen; /* your original design */

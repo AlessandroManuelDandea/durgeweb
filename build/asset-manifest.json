@@ -1,10 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5bce8155.css",
-    "main.js": "/static/js/main.a0a5ad89.js",
-    "static/media/red-grunge-background.jpg": "/static/media/red-grunge-background.3b5e69fb8bedfb22f4e5.jpg",
-    "static/media/herobg-mobile.png": "/static/media/herobg-mobile.1e79f6b2dd63b78aabec.png",
-    "static/media/darktexture.png": "/static/media/darktexture.f5b8d4176b5e15a8d69e.png",
+    "main.css": "/static/css/main.18f6631f.css",
+    "main.js": "/static/js/main.7b0d2d6a.js",
     "static/media/itch.png": "/static/media/itch.b055bbc31ca404f855e9.png",
     "static/media/about.png": "/static/media/about.ef6aeb2e5ff56882e7ba.png",
     "static/media/NewRocker-Regular.ttf": "/static/media/NewRocker-Regular.8c1d320ee68306021d3d.ttf",
@@ -16,11 +13,11 @@
     "static/media/Horst Blackletter Demo.ttf": "/static/media/Horst Blackletter Demo.22b75afa94c24419daa7.ttf",
     "static/media/instagram.png": "/static/media/instagram.f42075cbfbb8cffa4d07.png",
     "index.html": "/index.html",
-    "main.5bce8155.css.map": "/static/css/main.5bce8155.css.map",
-    "main.a0a5ad89.js.map": "/static/js/main.a0a5ad89.js.map"
+    "main.18f6631f.css.map": "/static/css/main.18f6631f.css.map",
+    "main.7b0d2d6a.js.map": "/static/js/main.7b0d2d6a.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bce8155.css",
-    "static/js/main.a0a5ad89.js"
+    "static/css/main.18f6631f.css",
+    "static/js/main.7b0d2d6a.js"
   ]
 }

@@ -12,7 +12,7 @@
 
     /* Container: no min-h-screen, just auto height */
     .footer-container {
-      @apply w-full h-screen flex flex-col bg-colors-dark text-colors-goldBeige py-8 px-4;
+      @apply w-full h-screen flex flex-col bg-colors-dark text-colors-goldBeige py-8 px-8;
       /* 
         py-8 => some vertical padding
         px-4 => smaller horizontal padding

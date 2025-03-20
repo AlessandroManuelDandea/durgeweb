@@ -3,93 +3,37 @@
 @tailwind utilities;
 
 @layer base {
-  /* By default, hidden on large screens */
   .mission_section_mobile {
-    display: none;
+    @apply w-full py-6 px-8 h-screen bg-colors-dark text-white flex flex-col items-center justify-center text-center;
   }
 
-  /* MOBILE ONLY (<= 768px) */
-  @media (max-width: 768px) {
+  .mission_container_mobile {
+    @apply flex flex-col items-center;
+  }
+
+  .mobile_toprow {
+    @apply flex justify-center ;
+  }
+
+  .mission_icon_mobile {
+    @apply w-24 h-24;
+  }
+
+  .mission_title_mobile {
+    @apply text-3xl font-oldenglishtextmt text-colors-redBright mb-5;
+  }
+
+  .mission_text_mobile {
+    @apply font-newrocker text-colors-goldBeige text-xl leading-tight mb-5;
+  }
+
+  .mission_text_mobile::before {
+    content: none;
+  }
+  @media (min-width: 768px) {
     .mission_section_mobile {
-      @apply block w-full py-6 px-4 bg-gray-800 text-white relative;
-      min-height: 100vh;
-      background-image: url('../img/red-grunge-background.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* Overlay for the background */
-    .mission_section_mobile::before {
-      content: '';
-      @apply absolute top-0 left-0 w-full h-full pointer-events-none;
-      background: linear-gradient(
-          to bottom,
-          #0C0B09 0%,
-          #0c0b093e 30%,
-          #0c0b093e 70%,
-          #0C0B09 100%
-        ),
-        url('../img/red-grunge-background.jpg');
-      background-size: cover;
-      background-position: center;
-      z-index: 1;
-    }
-
-    /* Container above the overlay */
-    .mission_container_mobile {
-      @apply relative z-10 flex flex-col items-center justify-center pt-16;
-      margin: 0 auto; /* center horizontally if needed */
-      width: 100%;
-      max-width: 600px; /* limit container width if you like */
-      text-align: center;
-      gap: 2rem; /* spacing between top row & texts */
-    }
-
-    /* Top row with symbol + title side by side, centered */
-    .mobile_toprow {
-      @apply w-full flex flex-row items-center justify-center;
-      gap: 10px; /* space between icon & title */
-      margin-bottom: 2rem; /* more vertical space below */
-    }
-
-    .mission_icon_mobile {
-      @apply w-32 h-32;
-      /* or bigger if you want */
-    }
-
-    .mission_title_mobile {
-      @apply text-3xl font-oldenglishtextmt text-colors-redBright;
-      /* center text horizontally if you prefer multiline:
-         text-center
-       */
-    }
-
-    /* The gold texts stacked below. We'll add bullet + spacing */
-    .mission_text_mobile {
-      @apply font-newrocker text-colors-goldBeige text-xl leading-relaxed;
-      /* Left-align the text */
-      @apply text-left;
-      margin-bottom: 2rem;
-      position: relative;
-      padding-left: 2rem; /* space for the bullet on the left */
-    }
-    
-    /* The bullet now points right (►) instead of up (▲). */
-    .mission_text_mobile::before {
-      content: '►'; /* Right-pointing triangle */
-      color: #C1A36D; /* gold color */
-      position: absolute;
-      left: 0; 
-      top: 50%;
-      transform: translateY(-50%); 
-      font-size: 1.2rem; /* adjust bullet size as desired */
-    }
-
-  /* DESKTOP HIDE MOBILE */
-  @media (min-width: 769px) {
-    .mission_section_mobile {
-      display: none;
+      display: none !important;
     }
   }
-}
+  
 }

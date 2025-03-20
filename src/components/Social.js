@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../styles/Social.css";
 
-// Remove eyeImg import, keep only the social icons
+// Social Icons
 import instagramIcon from "../img/instagram.png";
 import xIcon from "../img/X.png";
 import itchIcon from "../img/itch.png";
@@ -34,7 +34,7 @@ function Social() {
     };
   }, []);
 
-  // Called at end of each dropDown bounce
+  // Gestisce la fine dell'animazione di salita
   const handleAnimationEnd = (index) => {
     setDropDone((prev) => {
       const updated = [...prev];
@@ -43,24 +43,22 @@ function Social() {
     });
   };
 
-  // Conditionally add drop-down bounce if inView and not done
+  // Condizione per applicare l'effetto di salita
   const getEyeClass = (index, delayClass) => {
     if (inView && !dropDone[index]) {
-      return `eye-container drop-down-bounce ${delayClass}`;
+      return `eye-container rise-from-below ${delayClass}`;
     }
     return "eye-container";
   };
 
   return (
     <section ref={sectionRef} className="social-section">
-      {/* If on mobile, we may have a background + overlays. 
-          On desktop, only bg-colors-dark. */}
       <div className="social-bg"></div>
       <div className="social-overlay"></div>
       <div className="social-overlay-green"></div>
 
       <div className="social-content">
-        {/* Text above the icons */}
+        {/* Titolo e sottotitolo */}
         <h2 className={`social-title ${inView ? "fade-in-up delay-1" : ""}`}>
           Echoes of the Demiurge
         </h2>
@@ -69,9 +67,8 @@ function Social() {
           content. Connect with us on social media and be part of the journey.
         </p>
 
-        {/* Social icons below */}
+        {/* Social Icons */}
         <div className="eyes-container">
-          {/* Icon #1: Instagram */}
           <a
             href="https://www.instagram.com/durgeart/"
             target="_blank"
@@ -82,7 +79,6 @@ function Social() {
             <img src={instagramIcon} alt="Instagram" className="eye-icon" />
           </a>
 
-          {/* Icon #2: X */}
           <a
             href="https://x.com/DurgeGames"
             target="_blank"
@@ -93,7 +89,6 @@ function Social() {
             <img src={xIcon} alt="X" className="eye-icon" />
           </a>
 
-          {/* Icon #3: Itch.io */}
           <a
             href="https://durgegames.itch.io/"
             target="_blank"
@@ -104,7 +99,6 @@ function Social() {
             <img src={itchIcon} alt="Itch.io" className="eye-icon" />
           </a>
 
-          {/* Icon #4: YouTube */}
           <a
             href="https://www.youtube.com/@DurgeLog"
             target="_blank"
