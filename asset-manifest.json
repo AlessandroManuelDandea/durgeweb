@@ -1,7 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.174f0786.css",
-    "main.js": "/static/js/main.7b0d2d6a.js",
+    "main.css": "/static/css/main.af982bd4.css",
+    "main.js": "/static/js/main.09c53abe.js",
+    "static/media/gameBan.png": "/static/media/gameBan.3b76fc4bee8dfad2f825.png",
+    "static/media/herobg-mobile.png": "/static/media/herobg-mobile.1e79f6b2dd63b78aabec.png",
+    "static/media/herobg.png": "/static/media/herobg.5bc0d4411a080731b4f3.png",
+    "static/media/logo.png": "/static/media/logo.aa3656ba20ab1933acfc.png",
     "static/media/itch.png": "/static/media/itch.b055bbc31ca404f855e9.png",
     "static/media/about.png": "/static/media/about.ef6aeb2e5ff56882e7ba.png",
     "static/media/NewRocker-Regular.ttf": "/static/media/NewRocker-Regular.8c1d320ee68306021d3d.ttf",
@@ -13,11 +17,11 @@
     "static/media/Horst Blackletter Demo.ttf": "/static/media/Horst Blackletter Demo.22b75afa94c24419daa7.ttf",
     "static/media/instagram.png": "/static/media/instagram.f42075cbfbb8cffa4d07.png",
     "index.html": "/index.html",
-    "main.174f0786.css.map": "/static/css/main.174f0786.css.map",
-    "main.7b0d2d6a.js.map": "/static/js/main.7b0d2d6a.js.map"
+    "main.af982bd4.css.map": "/static/css/main.af982bd4.css.map",
+    "main.09c53abe.js.map": "/static/js/main.09c53abe.js.map"
   },
   "entrypoints": [
-    "static/css/main.174f0786.css",
-    "static/js/main.7b0d2d6a.js"
+    "static/css/main.af982bd4.css",
+    "static/js/main.09c53abe.js"
   ]
 }
