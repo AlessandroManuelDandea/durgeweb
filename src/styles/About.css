@@ -47,7 +47,7 @@
     }
 
     .about_section {
-      @apply  pt-16; /* simpler vertical spacing, no h-screen */
+      @apply  py-8; /* simpler vertical spacing, no h-screen */
     }
 
     .about_container {
