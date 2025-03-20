@@ -1,29 +1,33 @@
+// Navbar.js
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 import homeIcon from "../img/helmet.png";
 import fileTextIcon from "../img/ancient-scroll.png";
 import gamepadIcon from "../img/gaming.png";
 import messageSquareIcon from "../img/qa.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const menuItems = [
-    { id: "home", icon: homeIcon, label: "Developers" },
-    { id: "documents", icon: fileTextIcon, label: "Dev Logs" },
-    { id: "games", icon: gamepadIcon, label: "Games" },
-    { id: "faq", icon: messageSquareIcon, label: "FAQ" },
+    { id: "Developers", icon: homeIcon, label: "Developers", link: "/Developers" },
+    { id: "Devlogs", icon: fileTextIcon, label: "Dev Logs", link: "/DevLogs" },
+    { id: "games", icon: gamepadIcon, label: "Games", link: "/Games" },
+    { id: "q", icon: messageSquareIcon, label: "QA", link: "/Qa" },
   ];
 
   return (
     <nav className="navbar">
-      {/* Logo */}
+      {/* Logo (Link to homepage) */}
       <div className="navbar_logo">
-        <h1>Demiurgo Mythos</h1>
+        <Link to="/" className="navbar-logo-link">
+          <h1>Demiurgo Mythos</h1>
+        </Link>
       </div>
 
-      {/* Hamburger button (only shown on mobile via CSS) */}
+      {/* Hamburger button */}
       <button
         className="hamburger-btn"
         onClick={() => setMobileOpen(!mobileOpen)}
@@ -33,7 +37,7 @@ function Navbar() {
         <span className="hamburger-line" />
       </button>
 
-      {/* DESKTOP MENU (hover expansions) */}
+      {/* Desktop Menu */}
       <ul className="navbar_menu desktop-menu">
         {menuItems.map((item) => (
           <li
@@ -57,9 +61,9 @@ function Navbar() {
               >
                 {hoveredItem === item.id && (
                   <div className="hover_text_container expanded">
-                    <a href={`#${item.id}`} className="menu_label">
+                    <Link to={item.link} className="menu_label">
                       {item.label}
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
@@ -68,14 +72,18 @@ function Navbar() {
         ))}
       </ul>
 
-      {/* MOBILE MENU (slide-down animation), always in the DOM but toggled by class */}
+      {/* Mobile Menu */}
       <ul className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
         {menuItems.map((item) => (
           <li key={item.id} className="mobile-menu_item">
-            <img src={item.icon} alt={item.label} className="mobile-menu_icon" />
-            <a href={`#${item.id}`} className="mobile-menu_label">
+            <img
+              src={item.icon}
+              alt={item.label}
+              className="mobile-menu_icon"
+            />
+            <Link to={item.link} className="mobile-menu_label">
               {item.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

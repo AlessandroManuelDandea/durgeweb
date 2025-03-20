@@ -1,0 +1,45 @@
+/* src/styles/DevLogs.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* PHONE (max-width: 768px) */
+  @media (max-width: 768px) {
+    .devlogs-page {
+      @apply min-h-screen bg-colors-dark flex flex-col items-center px-4 pb-10 pt-14;
+    }
+
+    .devlogs-title {
+      @apply text-3xl text-colors-redBright mb-6 font-oldenglishtextmt;
+    }
+
+    .devlogs-container {
+      @apply w-full max-w-md flex flex-col gap-4;
+    }
+
+    .devlog-card {
+      @apply bg-colors-dark border border-colors-goldBeige rounded-lg p-4 shadow-lg;
+    }
+  }
+
+  /* MOBILE/Tablet/Desktop (min-width: 769px) */
+  @media (min-width: 769px) {
+    .devlogs-page {
+      @apply min-h-screen bg-colors-dark flex flex-col items-center px-10 pb-10 pt-14;
+    }
+
+    .devlogs-title {
+      @apply text-4xl text-colors-redBright mb-8 font-oldenglishtextmt;
+    }
+
+    .devlogs-container {
+      @apply w-1/2 max-w-5xl flex flex-col gap-6;
+    }
+
+    .devlog-card {
+      @apply bg-colors-dark border border-colors-goldBeige rounded-lg p-4 shadow-lg;
+    }
+  }
+}

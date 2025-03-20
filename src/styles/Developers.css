@@ -1,0 +1,93 @@
+/* src/styles/Developers.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .developers-page {
+      @apply min-h-screen bg-colors-dark flex flex-col items-center px-10 pt-16;
+    }
+
+    .developer-card {
+      @apply w-full flex flex-col gap-4 items-center justify-center border border-colors-goldBeige rounded-lg p-4 shadow-lg;
+      background-image: var(--dev-background);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .developer-card::before {
+      content: "";
+      @apply absolute inset-0 bg-black opacity-60;
+    }
+
+    .dev-info {
+      @apply flex flex-col items-center gap-2 relative z-10;
+    }
+
+    .dev-logo {
+      @apply w-16 h-16 rounded-full object-cover;
+    }
+
+    .dev-name {
+      @apply font-newrocker text-colors-goldBeige text-xl uppercase text-center;
+    }
+
+    .social-icons {
+      @apply flex gap-4 text-colors-goldBeige justify-center relative z-10;
+    }
+
+    .social-icons a:hover {
+      @apply text-colors-goldBeige;
+    }
+  }
+
+  /* DESKTOP */
+  @media (min-width: 769px) {
+    .developers-page {
+      @apply min-h-screen bg-colors-dark flex flex-col items-center px-40 py-20;
+    }
+
+    .developer-card {
+      @apply w-full flex-row flex items-center justify-between border border-colors-goldBeige rounded-lg p-4 shadow-lg transition duration-300;
+      background-image: var(--dev-background);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .developer-card::before {
+      content: "";
+      @apply absolute inset-0 bg-black opacity-60 transition-opacity duration-300;
+    }
+
+    .developer-card:hover::before {
+      @apply opacity-70;
+    }
+
+    .dev-info {
+      @apply flex items-center gap-4 relative z-10;
+    }
+
+    .dev-logo {
+      @apply w-16 h-16 rounded-full object-cover;
+    }
+
+    .dev-name {
+      @apply font-newrocker text-colors-goldBeige text-xl uppercase;
+    }
+
+    .social-icons {
+      @apply flex gap-4 text-colors-goldBeige relative z-10;
+    }
+
+    .social-icons a:hover {
+      @apply text-yellow-600;
+    }
+  }
+}

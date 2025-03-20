@@ -1,0 +1,25 @@
+/* src/styles/QA.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .qa-page {
+    /* Altezza piena, sfondo scuro e layout flessibile centrato */
+    @apply h-screen bg-colors-dark flex flex-col items-center justify-center px-10 py-10;
+  }
+
+  .qa-content {
+    /* Contenitore centrale con testo centrato */
+    @apply w-full max-w-5xl flex flex-col items-center justify-center text-center;
+  }
+
+  .qa-title {
+    @apply font-oldenglishtextmt text-4xl text-colors-redBright mb-6;
+  }
+
+  .qa-message {
+    @apply text-colors-goldBeige text-xl font-newrocker;
+  }
+}

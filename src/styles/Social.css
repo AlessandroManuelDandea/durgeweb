@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   /* =====================================
      MOBILE (max-width: 768px)
   ===================================== */
@@ -22,6 +21,7 @@
   
     .eye-container {
       @apply cursor-pointer flex items-center justify-center w-12 h-12;
+      opacity: 0; /* Partenza invisibile */
     }
   
     .eye-icon {
@@ -30,25 +30,25 @@
   
     .social-title {
       @apply text-3xl text-colors-redBright font-oldenglishtextmt mb-4 text-center;
+      opacity: 0; /* Partenza invisibile */
     }
   
     .social-subtitle {
       @apply max-w-md font-newrocker text-colors-goldBeige text-base leading-relaxed text-center px-7;
+      opacity: 0; /* Partenza invisibile */
     }
   }
   
-
   /* =====================================
      DESKTOP (min-width: 769px)
   ===================================== */
   @media (min-width: 769px) {
-
     .social-section {
       @apply relative w-full h-screen overflow-hidden bg-colors-dark;
     }
 
     .social-content {
-      @apply relative z-10 flex flex-col items-center justify-center h-full px-4 ;
+      @apply relative z-10 flex flex-col items-center justify-center h-full px-4;
     }
 
     .eyes-container {
@@ -59,15 +59,13 @@
       @apply relative cursor-pointer flex items-center justify-center;
       width: 4rem;
       height: 4rem;
-      transform: translateY(0);
-      opacity: 1;
-      animation: none;
+      opacity: 0; /* Partenza invisibile */
       border: none;
       background: none;
     }
 
     .eye-icon {
-      @apply w-full h-full object-cover  rounded-full;
+      @apply w-full h-full object-cover rounded-full;
     }
 
     .eye-container:hover {
@@ -75,50 +73,39 @@
     }
 
     .social-title {
-      @apply text-6xl text-colors-redBright font-oldenglishtextmt mb-4 text-center opacity-0;
+      @apply text-6xl text-colors-redBright font-oldenglishtextmt mb-4 text-center;
+      opacity: 0; /* Partenza invisibile */
     }
 
     .social-subtitle {
-      @apply max-w-6xl font-newrocker text-center text-colors-goldBeige text-3xl leading-relaxed  opacity-0;
+      @apply max-w-6xl font-newrocker text-center text-colors-goldBeige text-3xl leading-relaxed;
+      opacity: 0; /* Partenza invisibile */
     }
   }
 
   /* =====================================
      ANIMAZIONI
   ===================================== */
-  @keyframes riseFromBelow {
+
+  /* Animazione: slide-from-left */
+  @keyframes slideFromLeft {
     0% {
       opacity: 0;
-      transform: translateY(200px);
+      transform: translateX(-50px);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
     }
   }
 
-  .rise-from-below {
-    animation: riseFromBelow 1s ease-out forwards;
+  .slide-from-left {
+    animation: slideFromLeft 1s ease-out forwards;
   }
 
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .fade-in-up {
-    animation: fadeInUp 1s ease-out forwards;
-  }
-
+  /* Delays */
   .delay-0 { animation-delay: 0s; }
   .delay-1 { animation-delay: 0.2s; }
   .delay-2 { animation-delay: 0.4s; }
   .delay-3 { animation-delay: 0.6s; }
-
 }

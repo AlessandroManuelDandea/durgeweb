@@ -9,7 +9,6 @@ import youtubeIcon from "../img/youtube.png";
 
 function Social() {
   const [inView, setInView] = useState(false);
-  const [dropDone, setDropDone] = useState([false, false, false, false]);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -34,19 +33,9 @@ function Social() {
     };
   }, []);
 
-  // Gestisce la fine dell'animazione di salita
-  const handleAnimationEnd = (index) => {
-    setDropDone((prev) => {
-      const updated = [...prev];
-      updated[index] = true;
-      return updated;
-    });
-  };
-
-  // Condizione per applicare l'effetto di salita
   const getEyeClass = (index, delayClass) => {
-    if (inView && !dropDone[index]) {
-      return `eye-container rise-from-below ${delayClass}`;
+    if (inView) {
+      return `eye-container slide-from-left ${delayClass}`;
     }
     return "eye-container";
   };
@@ -59,12 +48,12 @@ function Social() {
 
       <div className="social-content">
         {/* Titolo e sottotitolo */}
-        <h2 className={`social-title ${inView ? "fade-in-up delay-1" : ""}`}>
+        <h2 className={`social-title ${inView ? "slide-from-left delay-1" : ""}`}>
           Echoes of the Demiurge
         </h2>
-        <p className={`social-subtitle ${inView ? "fade-in-up delay-2" : ""}`}>
-          Stay updated with our latest news, projects, and behind-the-scenes
-          content. Connect with us on social media and be part of the journey.
+        <p className={`social-subtitle ${inView ? "slide-from-left delay-2" : ""}`}>
+          Stay updated with our latest news, projects, and behind-the-scenes content.
+          Connect with us on social media and be part of the journey.
         </p>
 
         {/* Social Icons */}
@@ -74,7 +63,6 @@ function Social() {
             target="_blank"
             rel="noopener noreferrer"
             className={getEyeClass(0, "delay-0")}
-            onAnimationEnd={() => handleAnimationEnd(0)}
           >
             <img src={instagramIcon} alt="Instagram" className="eye-icon" />
           </a>
@@ -84,7 +72,6 @@ function Social() {
             target="_blank"
             rel="noopener noreferrer"
             className={getEyeClass(1, "delay-1")}
-            onAnimationEnd={() => handleAnimationEnd(1)}
           >
             <img src={xIcon} alt="X" className="eye-icon" />
           </a>
@@ -94,7 +81,6 @@ function Social() {
             target="_blank"
             rel="noopener noreferrer"
             className={getEyeClass(2, "delay-2")}
-            onAnimationEnd={() => handleAnimationEnd(2)}
           >
             <img src={itchIcon} alt="Itch.io" className="eye-icon" />
           </a>
@@ -104,7 +90,6 @@ function Social() {
             target="_blank"
             rel="noopener noreferrer"
             className={getEyeClass(3, "delay-3")}
-            onAnimationEnd={() => handleAnimationEnd(3)}
           >
             <img src={youtubeIcon} alt="YouTube" className="eye-icon" />
           </a>

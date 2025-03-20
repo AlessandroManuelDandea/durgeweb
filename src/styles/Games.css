@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+    /* =========================================
+       MOBILE (max-width: 768px)
+       => simpler stacked layout
+    ========================================= */
+    @media (max-width: 768px) {
+  
+        .games-page {
+            @apply w-full px-10 min-h-screen bg-colors-dark flex flex-col items-center justify-start  pt-10 pb-10;
+          }
+          
+          .games-content {
+            @apply w-full max-w-5xl flex flex-col gap-4 ;
+          }
+          
+          .category-title {
+            @apply font-oldenglishtextmt text-3xl text-colors-redBright mt-8 mb-2 text-left w-full;
+          }
+          
+          .game-label {
+            @apply mb-5 w-full h-20 rounded-md border-2 border-colors-goldBeige bg-cover bg-center relative flex items-center overflow-hidden;
+          }
+          
+          .empty-label {
+            @apply bg-black bg-opacity-60;
+          }
+          
+          .game-title-overlay {
+            @apply font-newrocker text-colors-goldBeige text-sm tracking-widest uppercase pl-6 pr-4 py-1 ml-4  bg-opacity-80 rounded;
+          }
+    }
+  
+  
+    /* =========================================
+       DESKTOP (min-width: 769px)
+       => original "full page" design
+    ========================================= */
+    @media (min-width: 769px) {
+  
+        .games-page {
+            @apply w-full px-40 min-h-screen bg-colors-dark flex flex-col items-center justify-start  pt-28 pb-10;
+          }
+          
+          .games-content {
+            @apply w-full max-w-5xl flex flex-col gap-4 ;
+          }
+          
+          .category-title {
+            @apply font-oldenglishtextmt text-4xl text-colors-redBright mt-8 mb-2 text-left w-full;
+          }
+          
+          .game-label {
+            @apply mb-5 w-full h-20 rounded-md border-2 border-colors-goldBeige bg-cover bg-center relative flex items-center overflow-hidden;
+          }
+          
+          .empty-label {
+            @apply bg-black bg-opacity-60;
+          }
+          
+          .game-title-overlay {
+            @apply font-newrocker text-colors-goldBeige text-xl tracking-widest uppercase pl-6 pr-4 py-1 ml-4  bg-opacity-80 rounded;
+          }
+    }
+  }
+  

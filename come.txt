@@ -1,5 +1,5 @@
 npm run build
 npm run deploy
 git add .
-git commit -m "Pulito la UI"
+git commit -m "versione 1.o del sito"
 git push

@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Qui rimane tutto il CSS originale che hai già inserito sopra */
+}
+
+@layer components {
+    /* Popup overlay (schermata scura dietro al popup) */
+    .popup-overlay {
+        @apply fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-20;
+    }
+
+    /* Popup content (finestra centrale) */
+    .popup-content {
+        @apply bg-colors-dark text-colors-goldBeige p-6 rounded-xl w-4/5 max-w-xl text-center shadow-xl relative;
+    }
+
+    /* Immagine del popup con altezza massima */
+    .popup-image {
+        @apply mx-auto h-72 w-auto object-contain rounded-md;
+      }
+      
+
+    /* Titolo del popup */
+    .popup-title {
+        @apply mt-4 text-3xl  font-oldenglishtextmt text-colors-redBright;
+    }
+
+    /* Descrizione del popup */
+    .popup-description {
+        @apply my-4 text-lg font-newrocker text-colors-goldBeige;
+    }
+
+    /* Bottone di chiusura del popup */
+    .popup-close-btn {
+        @apply px-4 py-2 bg-colors-redBright text-white rounded-md cursor-pointer transition-colors duration-200;
+    }
+
+    .popup-close-btn:hover {
+        @apply bg-colors-bloodDark;
+    }
+}
